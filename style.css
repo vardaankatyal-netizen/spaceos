@@ -1,0 +1,52 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#02050a;color:white;font-family:Arial,sans-serif;overflow:hidden}
+button,input,textarea{font-family:Arial,sans-serif}
+
+#boot{position:fixed;inset:0;background:#02050a;display:flex;align-items:center;justify-content:center;z-index:99999}
+.bootbox{width:420px;text-align:center}
+.bootbox h1{color:#55aaff;letter-spacing:8px;margin-bottom:15px}
+.bootbox p{color:#8d9aaa;margin:10px}
+.load{height:8px;background:#17202b;border-radius:10px;overflow:hidden}
+#loadbar{width:0;height:100%;background:#4ca5ff}
+
+#desktop{display:none;width:100vw;height:100vh;position:relative;overflow:hidden;background:#02050a;background-image:radial-gradient(white 1px,transparent 1px),radial-gradient(#7c9bb8 1px,transparent 1px);background-size:100px 100px,160px 160px}
+#desktop:after{content:"";position:absolute;width:650px;height:650px;right:-170px;bottom:-480px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#557b9d,#18344e 50%,#07111b 72%);box-shadow:0 -10px 70px #1c73ad;z-index:0}
+
+.topbar{height:50px;background:rgba(7,10,15,.96);border-bottom:1px solid #273544;display:flex;align-items:center;justify-content:space-between;padding:0 18px;position:relative;z-index:3000}
+#clock{font-size:18px}.topbar{font-size:13px}.topbar>div:first-child{font-size:19px;font-weight:bold}
+#online{color:#42e879}
+
+.icons{position:absolute;top:75px;left:22px;z-index:10}
+.app{width:75px;text-align:center;margin-bottom:18px;font-size:31px;cursor:pointer;user-select:none}
+.app:hover{transform:scale(1.07)}.app small{display:block;font-size:12px;margin-top:4px}
+
+.oswindow{position:absolute;width:570px;height:390px;left:260px;top:100px;background:#0a1018;border:1px solid #40536a;border-radius:8px;box-shadow:0 18px 50px #000;overflow:hidden;z-index:100}
+.titlebar{height:38px;background:#111a25;border-bottom:1px solid #304052;display:flex;align-items:center;justify-content:space-between;padding-left:12px;cursor:move;user-select:none}
+.title-buttons{display:flex}.titlebar button{width:38px;height:38px;border:0;background:transparent;color:white;cursor:pointer}
+.titlebar button:hover{background:#26384c}.windowbody{height:calc(100% - 38px);overflow:auto}
+
+.action{background:#183451;border:1px solid #3f678e;color:white;padding:8px 12px;border-radius:5px;cursor:pointer;margin:3px}
+.action:hover{background:#245075}.danger{background:#4a2025;border-color:#85434b}
+input.textbox{background:#080d13;color:white;border:1px solid #33475c;padding:9px;border-radius:5px;outline:none}
+
+.filesapp{padding:15px}.filetools{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px}.path{padding:8px 0;color:#8ea8bf;font-size:13px}
+.filegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.fileitem{padding:13px 7px;min-height:90px;text-align:center;border-radius:6px;cursor:pointer}
+.fileitem:hover{background:#172638}.fileitem.selected{background:#1d3b58;outline:1px solid #4d83b3}
+.fileicon{font-size:30px;margin-bottom:7px}.filename{font-size:12px;overflow-wrap:anywhere}
+
+.editor{height:100%;display:flex;flex-direction:column}.editorhead{padding:8px;background:#0d151f;display:flex}
+.editor textarea{flex:1;resize:none;border:0;outline:0;padding:14px;color:#d7e5f1;background:#05090e;font-family:Consolas,monospace;font-size:14px}
+
+.terminal{height:100%;padding:14px;background:#04070a;color:#66ef8b;font-family:Consolas,monospace;font-size:14px}
+.terminal-output{white-space:pre-wrap;line-height:1.5}.terminal-line{display:flex;margin-top:7px}.terminal-input{flex:1;background:transparent;color:#66ef8b;border:0;outline:0;font:inherit;margin-left:5px}
+
+.monitorapp,.commsapp,.settingsapp,.launcher{padding:18px}.monitorapp h2,.commsapp h2,.settingsapp h2,.launcher h2{margin-bottom:18px}
+.stat{margin:16px 0}.stattop{display:flex;justify-content:space-between;margin-bottom:5px}.statbar{height:9px;background:#222c37;border-radius:10px;overflow:hidden}.statfill{height:100%;background:#3e9cff}
+.message{background:#111c28;border:1px solid #26384b;padding:12px;border-radius:6px;margin:10px 0}.message small{color:#7e9ab2}
+.settingrow{padding:14px 0;border-bottom:1px solid #202d3a}.settingrow label{display:block;margin-bottom:7px;color:#9eb1c2}
+.launchergrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.launchapp{background:#101a25;border:1px solid #2c4055;padding:18px 5px;text-align:center;border-radius:7px;cursor:pointer}.launchapp:hover{background:#1a3148}.launchapp div{font-size:30px;margin-bottom:7px}
+
+#notifications{position:fixed;right:18px;top:65px;z-index:5000}.note{width:270px;background:#0d1620;border:1px solid #39516a;padding:13px;margin-bottom:8px;border-radius:7px;box-shadow:0 8px 25px #000}
+.dock{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);padding:7px;background:rgba(8,12,17,.96);border:1px solid #303f50;border-radius:10px;z-index:4000}
+.dock button{width:45px;height:45px;margin:2px;background:#121b26;border:0;border-radius:7px;color:white;font-size:20px;cursor:pointer}.dock button:hover{background:#1c3957}

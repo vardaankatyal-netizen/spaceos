@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SpaceOS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="boot">
+  <div class="bootbox">
+    <h1>SPACEOS</h1>
+    <p>Starting spacecraft systems...</p>
+    <div class="load"><div id="loadbar"></div></div>
+    <p id="boottext">Loading...</p>
+  </div>
+</div>
+
+<div id="desktop">
+  <div class="topbar">
+    <div>🌍 SpaceOS</div>
+    <div id="clock">00:00:00</div>
+    <div>
+      <span id="online">● ONLINE</span>
+      &nbsp;📶 O₂ <b id="oxygen">98%</b>
+      &nbsp;⚡ <b id="power">72%</b>
+      &nbsp;🌡 <b id="temp">22°C</b>
+    </div>
+  </div>
+
+  <div class="icons">
+    <div class="app" ondblclick="openApp('files')">📁<small>Files</small></div>
+    <div class="app" ondblclick="openApp('terminal')">💻<small>Terminal</small></div>
+    <div class="app" ondblclick="openApp('comms')">📡<small>Comms</small></div>
+    <div class="app" ondblclick="openApp('monitor')">📊<small>Monitor</small></div>
+    <div class="app" ondblclick="openApp('settings')">⚙️<small>Settings</small></div>
+    <div class="app" ondblclick="openApp('about')">🛰️<small>About</small></div>
+  </div>
+
+  <div id="windows"></div>
+  <div id="notifications"></div>
+
+  <div class="dock">
+    <button onclick="openApp('launcher')">☰</button>
+    <button onclick="openApp('files')">📁</button>
+    <button onclick="openApp('terminal')">💻</button>
+    <button onclick="openApp('comms')">📡</button>
+    <button onclick="openApp('monitor')">📊</button>
+    <button onclick="openApp('settings')">⚙️</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

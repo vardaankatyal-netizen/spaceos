@@ -26,10 +26,8 @@ date
 time
 status
 ls
-touch test.txt
-mkdir TestFolder
 echo hello
 about
 reboot
 
-This is a space webos created by Vardaan Katyal
+This is created by Vardaan Katyal

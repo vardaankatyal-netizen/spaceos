@@ -299,22 +299,24 @@ function notify(message) {
 
 
 function boot() {
-    let screen = document.getElementById("bootScreen");
-    let progress = document.getElementById("bootProgress");
-
-    if (!screen || !progress) return;
+    let boot = document.getElementById("boot");
+    let bar = document.getElementById("loadbar");
+    let text = document.getElementById("boottext");
 
     let value = 0;
 
     let timer = setInterval(() => {
         value += 10;
-        progress.style.width = value + "%";
+
+        bar.style.width = value + "%";
+        text.textContent = "Loading " + value + "%";
 
         if (value >= 100) {
             clearInterval(timer);
-            screen.style.display = "none";
+            boot.style.display = "none";
         }
     }, 100);
 }
 
+window.onload = boot;
 window.onload = boot;
